@@ -13,7 +13,7 @@ public class HeadCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player player = (Player) sender;
-        if (Var.permissionstatus.booleanValue() == true) {
+        if (Var.permissionstatus) {
             if (!player.hasPermission(Var.permission)) {
                 player.sendMessage(Var.permissionmessage);
                 return true;
@@ -21,7 +21,7 @@ public class HeadCommand implements CommandExecutor {
             if (args.length == 1) {
                 String target = args[0];
                 player.getInventory().addItem(new ItemBuilder(Material.PLAYER_HEAD).skullOwner(target).itemStack());
-                player.sendMessage(Var.Prefix + "Gave Head from: " + Bukkit.getPlayer(target).getDisplayName());
+                player.sendMessage(Var.Prefix + "Gave Head from: " + Bukkit.getPlayer(target).getName());
             }
 
             if (args.length == 0) {
