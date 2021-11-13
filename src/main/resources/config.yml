@@ -1,0 +1,5 @@
+Config:
+  Prefix: '§aHead §8» §6'
+ Permission: 'head.give'
+  Permission-Message: 'Missing Permission'
+  permission-active: true

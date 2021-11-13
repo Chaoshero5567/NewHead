@@ -1,0 +1,13 @@
+name: HeadPlugin
+version: '${project.version}'
+main: de.chaos.mc.headplugin.HeadPlugin
+api-version: 1.15
+prefix: Heads
+authors: [ Chaoshero5567 ]
+
+commands:
+  head:
+    description: Hole deinen oder den Kopd eines anderen Spielers!
+    aliases:
+      - skull
+
