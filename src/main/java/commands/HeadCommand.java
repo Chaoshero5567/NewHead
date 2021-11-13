@@ -21,7 +21,7 @@ public class HeadCommand implements CommandExecutor {
             if (args.length == 1) {
                 String target = args[0];
                 player.getInventory().addItem(new ItemBuilder(Material.PLAYER_HEAD).skullOwner(target).itemStack());
-                player.sendMessage(Var.Prefix + "Gave Head from: " + Bukkit.getPlayer(target).getName());
+                player.sendMessage(Var.Prefix + "Gave Head from: " + target);
             }
 
             if (args.length == 0) {
